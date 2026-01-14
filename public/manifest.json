@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "网盘转存助手",
+  "version": "1.0.0",
+  "description": "一键将夸克网盘资源转存到百度网盘，无需下载，云端直接转存",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    "default_title": "网盘转存助手"
+  },
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://pan.quark.cn/*",
+    "https://drive-pc.quark.cn/*",
+    "https://pan.baidu.com/*",
+    "https://*.baidupcs.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

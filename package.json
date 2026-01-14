@@ -1,0 +1,35 @@
+{
+  "name": "sa-pantool-extension",
+  "version": "1.0.0",
+  "description": "夸克网盘到百度网盘转存浏览器插件",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-icons": "node scripts/generate-icons.js",
+    "prebuild": "npm run generate-icons"
+  },
+  "keywords": [
+    "chrome-extension",
+    "quark",
+    "baidu",
+    "netdisk",
+    "transfer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "element-plus": "^2.13.1",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.26",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.3.0",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "sharp": "^0.34.5",
+    "vite": "^5.4.19"
+  }
+}
